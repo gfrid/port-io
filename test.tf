@@ -13,7 +13,7 @@ provider "port-labs" {
 	base_url  = "https://api.getport.io/v1"
 }
 
-resource "port-labs_entity" "some_identifier" {
+resource "port-labs_entity" "deployment" {
     title      = "Deployment"
     identifier = "deployment"
     blueprint  = "deployment"
