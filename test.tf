@@ -13,30 +13,15 @@ provider "port-labs" {
 	base_url  = "https://api.getport.io/v1"
 }
 
-resource "port-labs_entity" "deployment" {
-    title      = "Deployment"
-    identifier = "deployment"
-    blueprint  = "deployment"
+resource "port-labs_blueprint" "s3_bucket" {
+  identifier = "s3Bucket"
+  icon       = "Bucket"
+  title      = "S3 Bucket"
 
-    properties {
-		name  = "name"
-		value = "string"
-	}
-
-	properties {
-		name  = "url"
-		value = "https://example.com"
-	}
-
-	properties {
-		name  = "readme"
-		value = "string"
-	}
-
-	properties {
-		name  = "about"
-		value = "string"
-	}
-
-    
+  properties {
+    identifier = "isPrivate"
+    title      = "Is private?"
+    required   = false
+    type       = "boolean"
+  }
 }
