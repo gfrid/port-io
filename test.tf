@@ -14,8 +14,8 @@ provider "port-labs" {
 
 }
 
-resource "port-labs_entity" "test" {
-    title      = "test"
+resource "port-labs_entity" "test1" {
+    title      = "test1"
     identifier = "test1"
     blueprint  = "package"
 
