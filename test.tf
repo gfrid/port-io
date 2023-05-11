@@ -1,10 +1,10 @@
 terraform {
-	required_providers {
-		port-labs = {
-			source  = "port-labs/port-labs"
-			version = "~> 0.8.1"
-		}
-	}
+  required_providers {
+    port-labs = {
+      source  = "port-labs/port-labs"
+      version = "~> 0.9.6"
+    }
+  }
 }
 	
 provider "port-labs" {
