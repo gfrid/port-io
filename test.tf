@@ -13,15 +13,18 @@ provider "port-labs" {
 	base_url  = "https://api.getport.io/v1"
 }
 
-resource "port-labs_blueprint" "s3_bucket" {
-  identifier = "s3Bucket"
-  icon       = "Bucket"
-  title      = "S3 Bucket"
+resource "port-labs_entity" "py-script" {
+    title      = "py-test"
+    identifier = "py-script"
+    blueprint  = "package"
 
-  properties {
-    identifier = "isPrivate"
-    title      = "Is private?"
-    required   = false
-    type       = "boolean"
-  }
+    properties {
+		name  = "language"
+		value = "Python"
+	}
+
+	properties {
+		name  = "version"
+		value = "string"
+	}
 }
