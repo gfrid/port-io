@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: echo-deploy
-        run: echo "deploy"
+        run: echo ${{ github.event.inputs.service }} ${{ github.event.inputs.environment }}
 
       # ADD YOUR DEPLOYMENT LOGIC HERE!
 
