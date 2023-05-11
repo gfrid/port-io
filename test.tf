@@ -14,9 +14,9 @@ provider "port-labs" {
 }
 
 resource "port-labs_entity" "some_identifier" {
-    title      = "Some Title"
-    identifier = "some_identifier"
-    blueprint  = "service"
+    title      = "Deployment"
+    identifier = "deployment"
+    blueprint  = "deployment"
 
     properties {
 		name  = "name"
